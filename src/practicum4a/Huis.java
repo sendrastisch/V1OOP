@@ -19,7 +19,13 @@ public class Huis {
     }
 
     public String toString() {
-        String s = adres + " is gebouwd in " + bouwjaar + " en heeft huisbaas " + huisbaas.toString();
+        String s = adres + " is gebouwd in " + bouwjaar + " en heeft ";
+        if (huisbaas == null) {
+            s = s + "nog geen huisbaas";
+        }
+        else {
+            s = s + " huisbaas" + huisbaas.toString();
+        }
         return s;
     }
 }
